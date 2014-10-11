@@ -85,4 +85,6 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: heroku
+  repo: git@heroku.com:pranavsingh.git
+  message: Site Updated at: {{ now('YYYY-MM-DD HH:mm:ss') }}
