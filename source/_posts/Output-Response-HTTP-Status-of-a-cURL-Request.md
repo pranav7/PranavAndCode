@@ -1,6 +1,6 @@
 title: Output Response HTTP Status of a cURL Request
 date: 2014-10-10 21:38:28
-tags: [cURL API]
+tags: [API]
 ---
 
 Debugging your API can be a subtle pain in your backside. Though there are some handy tools available to do that, [Apigee](http://apigee.com) and [Postman](http://www.getpostman.com/) are pretty sweet, but there’d be a lot of folks out there who love to just go native and do it. cURL ftw! 
