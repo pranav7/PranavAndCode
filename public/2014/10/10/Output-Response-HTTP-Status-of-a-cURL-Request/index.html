@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Output Response HTTP Status of a cURL Request | Pranav &amp; Code</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="Pranav & Code">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(//blog.ghost.org/content/images/2013/Nov/cover.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="//blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">Pranav & Code</h1>
+            <h2 class="blog-description"></h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2014-10-10T16:08:28.000Z" itemprop="datePublished">
+          Oct 10 2014
+      </time>
+    
+</span>
+    <h1 class="post-title">Output Response HTTP Status of a cURL Request</h1>
+    <section class="post-content">
+      <p>Debugging your API can be a subtle pain in your backside. Though there are some handy tools available to do that, <a href="http://apigee.com" target="_blank" rel="external">Apigee</a> and <a href="http://www.getpostman.com/" target="_blank" rel="external">Postman</a> are pretty sweet, but there’d be a lot of folks out there who love to just go native and do it. cURL ftw! </p>
+<p>Below is a handy trick on how you can print the response status of your cURL request.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-w <span class="string">"\nSTATUS: %{http_code}\n"</span></div></pre></td></tr></table></figure>
+
+<p><code>-w</code> helps you to write an output after completion.<br>You can also add <code>-s</code> as an option if you want to silence the output of your cURL request. </p>
+<p><strong>Below is an example cURL request:</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">curl -X PUT \</div><div class="line">-<span class="ruby"><span class="constant">H</span> <span class="string">"Accept: application/json"</span> \</span></div><div class="line">-<span class="ruby"><span class="constant">H</span> <span class="symbol">http:</span>/<span class="regexp">/yourapp.com/api</span><span class="regexp">/endpoint \</span></span></div><div class="line">-<span class="ruby">w <span class="string">"\n\nSTATUS: %{http_code}\n\n"</span></span></div><div class="line"></div><div class="line">STATUS: 200</div></pre></td></tr></table></figure>
+
+<p>That helped at a lot of folks at my office, SupportBee. Hope it helps you guys too!</p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>Pranav Singh</h4>
+    <p>Developer at SupportBee // @pranav7</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://pranavsingh.herokuapp.com/2014/10/10/Output-Response-HTTP-Status-of-a-cURL-Request/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://pranavsingh.herokuapp.com/2014/10/10/Output-Response-HTTP-Status-of-a-cURL-Request/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://pranavsingh.herokuapp.com/2014/10/10/Output-Response-HTTP-Status-of-a-cURL-Request/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">Pranav & Code</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'pranavcode';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+</body>
+</html>
