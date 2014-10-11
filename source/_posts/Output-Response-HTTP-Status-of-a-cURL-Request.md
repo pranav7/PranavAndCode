@@ -12,7 +12,7 @@ Below is a handy trick on how you can print the response status of your cURL req
 ```
 
 `-w` helps you to write an output after completion.
-You can also add `-s` as an option if you want silence the output of your cURL request. 
+You can also add `-s` as an option if you want to silence the output of your cURL request. 
 
 **Below is an example cURL request:**
 
