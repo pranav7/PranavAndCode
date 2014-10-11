@@ -87,4 +87,3 @@ exclude_generator:
 deploy:
   type: heroku
   repo: git@heroku.com:pranavsingh.git
-  message: Site Updated at: {{ now('YYYY-MM-DD HH:mm:ss') }}
