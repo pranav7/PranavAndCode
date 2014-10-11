@@ -3,7 +3,7 @@ date: 2014-10-10 21:38:28
 tags:
 ---
 
-Debugging your API can be a subtle pain in your backside. Though there are some handy tools available to do that, Apigee and Postman are pretty sweet, but there’d be a lot of folks out there who love to just go native and do it. cURL ftw! 
+Debugging your API can be a subtle pain in your backside. Though there are some handy tools available to do that, [Apigee](http://apigee.com) and [Postman](http://www.getpostman.com/) are pretty sweet, but there’d be a lot of folks out there who love to just go native and do it. cURL ftw! 
 
 Below is a handy trick on how you can print the response status of your cURL request.
 
